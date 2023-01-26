@@ -7,10 +7,11 @@
     <title>Canvas</title>
   </head>
   <body>
-    <canvas id="draw" width="800" height="800"></canvas>
-    <button id="reset-button">Reset</button>
-    <button id="screenshot-button">Take Screenshot</button>
-
+    <div>
+      <canvas id="draw" width="800" height="900"></canvas>
+      <button id="reset-button">Reset</button>
+      <button id="screenshot-button">Take Screenshot</button>
+    </div>
 
     <script>
       "use strict";
@@ -22,14 +23,13 @@
         });
 
         const screenshotButton = document.querySelector("#screenshot-button");
-screenshotButton.addEventListener("click", () => {
-  const dataUrl = canvas.toDataURL();
-  const link = document.createElement("a");
-  link.download = "screenshot.png";
-  link.href = dataUrl;
-  link.click();
-});
-
+        screenshotButton.addEventListener("click", () => {
+          const dataUrl = canvas.toDataURL();
+          const link = document.createElement("a");
+          link.download = "screenshot.png";
+          link.href = dataUrl;
+          link.click();
+        });
 
         const canvas = document.querySelector("#draw");
         const ctx = canvas.getContext("2d");
@@ -89,6 +89,7 @@ screenshotButton.addEventListener("click", () => {
       html,
       body {
         margin: 0;
+        padding: 0;
       }
 
       #toggle-reset {
@@ -98,6 +99,20 @@ screenshotButton.addEventListener("click", () => {
       button {
         background-color: black;
         color: white;
+        width: 150px;
+      }
+
+      div {
+        border: 20px solid rgb(108, 52, 52);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
       }
     </style>
   </body>
