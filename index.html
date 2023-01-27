@@ -7,10 +7,13 @@
     <title>Canvas</title>
   </head>
   <body>
-    <div>
-      <canvas id="draw" width="800" height="900"></canvas>
+    <h1>My Drawing Pad</h1>
+    <div class="container">
+      <div class="canvas"><canvas id="draw"></canvas></div>
+      <div class="navigation">
       <button id="reset-button">Reset</button>
       <button id="screenshot-button">Take Screenshot</button>
+    </div>
     </div>
 
     <script>
@@ -90,6 +93,7 @@
       body {
         margin: 0;
         padding: 0;
+        background-color: #596e79;
       }
 
       #toggle-reset {
@@ -98,12 +102,32 @@
 
       button {
         background-color: black;
-        color: white;
+        color: #f0ece2;
         width: 150px;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        border-radius: 50px;
+       
       }
 
-      div {
-        border: 20px solid rgb(108, 52, 52);
+      .navigation {
+        display: flex;
+        padding: 40px;
+        display: flex;
+  justify-content: center; /* this centers the buttons horizontally */
+  align-items: center; /* this centers the buttons vertically */
+  padding: 40px;
+      }
+
+      .canvas {
+        background-color: #f0ece2;
+        margin: 40px;
+        display: flex;
+      }
+
+    .container {
+        border: 20px solid #c7b198;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         border-bottom-left-radius: 50px;
@@ -113,6 +137,17 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        height: auto;
+        margin: 80px;
+        /* display: flex; */
+        flex-direction: column;
+        background-color: #dfd3c3;
+
+      }
+
+      h1{
+        text-align: center;
+        color: #f0ece2;
       }
     </style>
   </body>
