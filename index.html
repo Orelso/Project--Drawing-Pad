@@ -7,7 +7,7 @@
     <title>Canvas</title>
   </head>
   <body>
-    <h1>My Drawing Pad</h1>
+    <h1>My Drawing Pad 🎨</h1>
     <div class="container">
       <div class="canvas"><canvas id="draw"></canvas></div>
       <div class="navigation">
@@ -89,6 +89,9 @@
     </script>
 
     <style>
+      
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
       html,
       body {
         margin: 0;
@@ -101,14 +104,20 @@
       }
 
       button {
-        background-color: black;
+        background-color: #596e79;
         color: #f0ece2;
         width: 150px;
         height: 40px;
         text-align: center;
         align-items: center;
-        border-radius: 50px;
+        border-radius: 20px;
+        margin-right: 5px;
        
+      }
+
+      button:hover {
+        width: 180px;
+        height: 45px;
       }
 
       .navigation {
@@ -148,6 +157,9 @@
       h1{
         text-align: center;
         color: #f0ece2;
+        font-family: 'Caveat', cursive;
+        font-size: 80px;
+        margin-bottom: -70px;
       }
     </style>
   </body>
