@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>"
+    />
+
     <title>Canvas</title>
   </head>
   <body>
@@ -11,9 +16,9 @@
     <div class="container">
       <div class="canvas"><canvas id="draw"></canvas></div>
       <div class="navigation">
-      <button id="reset-button">Reset</button>
-      <button id="screenshot-button">Take Screenshot</button>
-    </div>
+        <button id="reset-button">Reset</button>
+        <button id="screenshot-button">Take Screenshot</button>
+      </div>
     </div>
 
     <script>
@@ -89,8 +94,7 @@
     </script>
 
     <style>
-      
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
 
       html,
       body {
@@ -112,7 +116,6 @@
         align-items: center;
         border-radius: 20px;
         margin-right: 5px;
-       
       }
 
       button:hover {
@@ -124,9 +127,9 @@
         display: flex;
         padding: 40px;
         display: flex;
-  justify-content: center; /* this centers the buttons horizontally */
-  align-items: center; /* this centers the buttons vertically */
-  padding: 40px;
+        justify-content: center; /* this centers the buttons horizontally */
+        align-items: center; /* this centers the buttons vertically */
+        padding: 40px;
       }
 
       .canvas {
@@ -135,7 +138,7 @@
         display: flex;
       }
 
-    .container {
+      .container {
         border: 20px solid #c7b198;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -151,15 +154,55 @@
         /* display: flex; */
         flex-direction: column;
         background-color: #dfd3c3;
-
       }
 
-      h1{
+      h1 {
         text-align: center;
         color: #f0ece2;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
         font-size: 80px;
         margin-bottom: -70px;
+      }
+      @media only screen and (max-width: 414px) {
+        /* Styles for iPhone 12 */
+        .navigation {
+          padding: 20px;
+        }
+
+        button {
+          width: 120px;
+          height: 35px;
+          font-size: 14px;
+        }
+
+        button:hover {
+          width: 150px;
+          height: 40px;
+        }
+
+        .canvas {
+          margin: 20px;
+          height: 450px;
+        }
+
+        .container {
+          margin: 40px;
+          padding: 20px;
+          border-width: 10px;
+        }
+
+        h1 {
+          font-size: 40px;
+          margin-bottom: -30px;
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        #toggle-reset {
+          display: none;
+        }
       }
     </style>
   </body>
